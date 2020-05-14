@@ -1,0 +1,18 @@
+---
+- name: Include variables
+  include_vars: main.yml
+
+- name: Install Docker
+  win_chocolatey:
+    name: docker-cli
+    state: present
+    version: '19.03.3'
+    ignore_checksums: yes
+
+- name: Install Sublime Text Editor
+  win_chocolatey:
+    name: sublimetext3.app
+    state: present
+    version: '3.0.0.3065'
+    ignore_checksums: yes
+...
